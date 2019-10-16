@@ -33,8 +33,8 @@ function startPrompt() {
 function makeTable() {
     connection.query("SELECT * FROM products", function(err,res) {
         for (var i=0; i<res.length; i++) {
-            console.log(res[i].item_id + " || " + res[i].product_name + " || " + res[i].department_name
-            + " || " + res[i].price + " || " + res[i].stock_quantity + "\n");
+            console.log("Product ID: " + res[i].item_id + " || Product Name: " + res[i].product_name + " || Department Name: " + res[i].department_name
+            + " || Price: " + res[i].price + " || Quantity: " + res[i].stock_quantity + "\n");
         }
         customerPrompt();
     })
